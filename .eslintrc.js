@@ -5,7 +5,6 @@ module.exports = {
   },
   extends: [
     "eslint:recommended",
-    "@mantine/eslint-config",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
   ],
