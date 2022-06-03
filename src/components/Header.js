@@ -9,7 +9,8 @@ const MyHeader = () => {
   return (
     <Header
       px={18}
-      py={24}
+      pt={27}
+      pb={5}
       sx={{
         display: "flex",
         backgroundColor: dark ? theme.colors.dark[8] : theme.colors.blue[3],
