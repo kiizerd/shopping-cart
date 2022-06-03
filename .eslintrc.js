@@ -9,7 +9,6 @@ module.exports = {
     "plugin:react/jsx-runtime",
   ],
   parserOptions: {
-    project: "./tsconfig.json",
     ecmaFeatures: {
       jsx: true,
     },

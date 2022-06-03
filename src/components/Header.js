@@ -1,22 +1,27 @@
-import styled, { css } from "styled-components";
+import { Header, Title, useMantineTheme } from "@mantine/core";
+import Navbar from "./Navbar";
 
-const style = css`
-  background-color: #2f2d2a;
-  padding: 1rem;
-  border-bottom: 1px solid black;
+const MyHeader = () => {
+  const theme = useMantineTheme();
+  const colorScheme = theme.colorScheme;
+  const dark = colorScheme === "dark";
 
-  h3 {
-    margin: 0;
-  }
-`;
+  return (
+    <Header
+      px={18}
+      py={24}
+      sx={{
+        display: "flex",
+        backgroundColor: dark ? theme.colors.dark[8] : theme.colors.blue[3],
+        justifyContent: "space-around",
+        flexWrap: "wrap",
+        borderColor: dark ? theme.colors.dark[3] : theme.colors.dark[8],
+      }}
+    >
+      <Title order={3}>Electronics and Accessories</Title>
+      <Navbar />
+    </Header>
+  );
+};
 
-const Header = styled(({ children, ...rest }) => (
-  <header {...rest}>
-    <h3>Electronics and Accessories</h3>
-    {children}
-  </header>
-))`
-  ${style}
-`;
-
-export default Header;
+export default MyHeader;
