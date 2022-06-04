@@ -57,7 +57,6 @@ const QuantityInput = ({ min = 1, max = 10 }) => {
         onClick={() => handlers.current.decrement()}
         disabled={value === min}
         className={classes.control}
-        onMouseDown={(event) => event.preventDefault()}
       >
         <Minus size={16} />
       </ActionIcon>
@@ -78,7 +77,6 @@ const QuantityInput = ({ min = 1, max = 10 }) => {
         onClick={() => handlers.current.increment()}
         disabled={value === max}
         className={classes.control}
-        onMouseDown={(event) => event.preventDefault()}
       >
         <Plus size={16} />
       </ActionIcon>
