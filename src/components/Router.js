@@ -9,7 +9,35 @@ const Router = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/store" element={<Store />} />
+        <Route
+          path="/store"
+          element={
+            <Store
+              items={[
+                {
+                  name: "foobar1",
+                  description: "really thes best kind of thing",
+                },
+                {
+                  name: "barboo2",
+                  description: "really thes best kind of thing",
+                },
+                {
+                  name: "whoooads",
+                  description: "really thes best kind of thing",
+                },
+                {
+                  name: "batads",
+                  description: "really thes best kind of thing",
+                },
+                {
+                  name: "whstres",
+                  description: "really thes best kind of thing",
+                },
+              ]}
+            />
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
