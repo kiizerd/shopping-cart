@@ -1,7 +1,7 @@
 import { Button, Group } from "@mantine/core";
 import { Link } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
-import CartButton from "./CartButton";
+import Cart from "./Cart";
 
 const Navbar = () => {
   return (
@@ -12,7 +12,7 @@ const Navbar = () => {
       <Button component={Link} to="store">
         Store
       </Button>
-      <CartButton />
+      <Cart />
       <ThemeToggle />
     </Group>
   );
