@@ -17,7 +17,6 @@ import officeBg3 from "../../media/office-background3.jpg";
 
 const useStyles = createStyles((theme) => {
   const dark = theme.colorScheme === "dark";
-  console.log(theme.breakpoints);
   return {
     row: {
       minHeight: 200,
