@@ -10,17 +10,22 @@ import {
 } from "@mantine/core";
 import QuantityInput from "./QuantityInput";
 import PropTypes from "prop-types";
-import ComputerDog from "../media/computer-dog.jpg";
+import itemImages from "../helpers/itemImages";
 
 const ItemCard = ({ item }) => {
   const theme = useMantineTheme();
   const secondaryColor =
     theme.colorScheme === "dark" ? theme.colors.dark[1] : theme.colors.gray[7];
   return (
-    <Center sx={{ margin: "auto" }}>
-      <Card shadow="sm" p="lg">
+    <Center>
+      <Card shadow="md" p="md">
         <Card.Section>
-          <Image src={ComputerDog} height={160} alt="computer dog" />
+          <Image
+            src={itemImages[item.imageSrc]}
+            alt={item.imageSrc}
+            height={240}
+            m="auto"
+          />
         </Card.Section>
         <Group
           sx={{
@@ -29,13 +34,26 @@ const ItemCard = ({ item }) => {
             justifyContent: "space-between",
           }}
         >
-          <Text weight={500}>{item.name}</Text>
+          <Text lineClamp={1} weight={500}>
+            {item.name}
+          </Text>
           <div>
-            <Badge color="red" variant="light">
-              On sale
-            </Badge>
-            <Badge color="white" variant="light" ml={10}>
-              15.89
+            {item.isOnSale ? (
+              <Badge color="red" variant="light">
+                On sale
+              </Badge>
+            ) : (
+              false
+            )}
+            {item.brand ? (
+              <Badge mr={5} color="green" variant="light">
+                {item.brand}
+              </Badge>
+            ) : (
+              false
+            )}
+            <Badge color="white" variant="light">
+              {item.price}
             </Badge>
           </div>
         </Group>
@@ -43,7 +61,7 @@ const ItemCard = ({ item }) => {
           {item.description}
         </Text>
         <Group sx={{ display: "flex", flexWrap: "nowrap", marginTop: 15 }}>
-          <Button variant="light" color="primary" size="sm">
+          <Button variant="light" color="primary" size="sm" fullWidth>
             Add to cart
           </Button>
           <QuantityInput />
