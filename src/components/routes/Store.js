@@ -19,7 +19,7 @@ const filterItems = (items, search) => {
   );
 };
 
-const SortedStore = () => {
+const Store = () => {
   const [items, setItems] = useState(itemData);
   const [search, setSearch] = useState("");
   const [searchedItems, setSearchedItems] = useState(items);
@@ -66,8 +66,8 @@ const SortedStore = () => {
   );
 };
 
-SortedStore.propTypes = {
+Store.propTypes = {
   items: PropTypes.arrayOf(PropTypes.object),
 };
 
-export default SortedStore;
+export default Store;
