@@ -23,8 +23,7 @@ const ItemCard = ({ item }) => {
           <Image
             src={itemImages[item.imageSrc]}
             alt={item.imageSrc}
-            height={240}
-            m="auto"
+            height={300}
           />
         </Card.Section>
         <Group
@@ -38,26 +37,19 @@ const ItemCard = ({ item }) => {
             {item.name}
           </Text>
           <div>
-            {item.isOnSale ? (
-              <Badge color="red" variant="light">
-                On sale
-              </Badge>
-            ) : (
-              false
-            )}
-            {item.brand ? (
-              <Badge mr={5} color="green" variant="light">
+            {item.brand && (
+              <Badge mr={5} color="green">
                 {item.brand}
               </Badge>
-            ) : (
-              false
             )}
-            <Badge color="white" variant="light">
-              {item.price}
-            </Badge>
+            <Badge color="white">{item.price}</Badge>
           </div>
         </Group>
-        <Text size="sm" sx={{ color: secondaryColor, lineHeight: 1.5 }}>
+        <Text
+          size="sm"
+          lineClamp={2}
+          sx={{ color: secondaryColor, lineHeight: 1.5 }}
+        >
           {item.description}
         </Text>
         <Group sx={{ display: "flex", flexWrap: "nowrap", marginTop: 15 }}>
