@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 const InfoCard = ({ children, className }) => {
   return (
-    <Center className={className}>
-      <Card shadow="md" p="sm">
+    <Center m="auto" className={className}>
+      <Card p="sm" shadow="lg">
         {children}
       </Card>
     </Center>
