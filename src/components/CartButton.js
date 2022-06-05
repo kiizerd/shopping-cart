@@ -11,7 +11,7 @@ const CartButton = ({ onclick }) => {
 };
 
 CartButton.propTypes = {
-  onclick: PropTypes.functions,
+  onclick: PropTypes.func,
 };
 
 export default CartButton;
