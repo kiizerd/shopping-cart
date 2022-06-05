@@ -12,9 +12,10 @@ import ItemCard from "../ItemCard";
 import itemData from "../../data";
 
 const filterItems = (items, search) => {
+  const keys = Object.keys(items[0]);
   const query = search.toLowerCase().trim();
   return items.filter((item) =>
-    String(item.name).toLowerCase().includes(query)
+    keys.some((key) => String(item[key]).toLowerCase().includes(query))
   );
 };
 
