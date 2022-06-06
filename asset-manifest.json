@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/shopping-cart/static/js/main.9ed8714b.js",
+    "static/media/hyperx-cloud.png": "/shopping-cart/static/media/hyperx-cloud.393cf8b47b17e1c73cd4.png",
+    "static/media/office-background2.jpg": "/shopping-cart/static/media/office-background2.d8ccf6b9f72fe35f83b3.jpg",
+    "static/media/logitech-f310.png": "/shopping-cart/static/media/logitech-f310.282991b069594a2b66cb.png",
+    "static/media/razer-black-widow.png": "/shopping-cart/static/media/razer-black-widow.7223ca2ffa5df5f89468.png",
+    "static/media/office-background.jpg": "/shopping-cart/static/media/office-background.baf812c4cc86a9b5f267.jpg",
+    "static/media/razer-basilisk.png": "/shopping-cart/static/media/razer-basilisk.899e60fe089a704dc291.png",
+    "static/media/logitech-g502.png": "/shopping-cart/static/media/logitech-g502.d53e3f4159cb09154516.png",
+    "static/media/office-background3.jpg": "/shopping-cart/static/media/office-background3.435c33e8d1cd68ebf5d5.jpg",
+    "static/media/razer-audio-mixer.png": "/shopping-cart/static/media/razer-audio-mixer.9d44a17853ef1f66506b.png",
+    "static/media/razer-tartarus.png": "/shopping-cart/static/media/razer-tartarus.3fe897e3a0116a27fffc.png",
+    "static/media/razer-kraken-ultimate.png": "/shopping-cart/static/media/razer-kraken-ultimate.3258d8b100791a610ff8.png",
+    "static/media/razer-hammerhead.png": "/shopping-cart/static/media/razer-hammerhead.461e3c0d67c756d9be2e.png",
+    "index.html": "/shopping-cart/index.html",
+    "main.9ed8714b.js.map": "/shopping-cart/static/js/main.9ed8714b.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.9ed8714b.js"
+  ]
+}
