@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/shopping-cart/static/js/main.9ed8714b.js",
+    "main.js": "/shopping-cart/static/js/main.116f6450.js",
     "static/media/hyperx-cloud.png": "/shopping-cart/static/media/hyperx-cloud.393cf8b47b17e1c73cd4.png",
     "static/media/office-background2.jpg": "/shopping-cart/static/media/office-background2.d8ccf6b9f72fe35f83b3.jpg",
     "static/media/logitech-f310.png": "/shopping-cart/static/media/logitech-f310.282991b069594a2b66cb.png",
@@ -14,9 +14,9 @@
     "static/media/razer-kraken-ultimate.png": "/shopping-cart/static/media/razer-kraken-ultimate.3258d8b100791a610ff8.png",
     "static/media/razer-hammerhead.png": "/shopping-cart/static/media/razer-hammerhead.461e3c0d67c756d9be2e.png",
     "index.html": "/shopping-cart/index.html",
-    "main.9ed8714b.js.map": "/shopping-cart/static/js/main.9ed8714b.js.map"
+    "main.116f6450.js.map": "/shopping-cart/static/js/main.116f6450.js.map"
   },
   "entrypoints": [
-    "static/js/main.9ed8714b.js"
+    "static/js/main.116f6450.js"
   ]
 }
