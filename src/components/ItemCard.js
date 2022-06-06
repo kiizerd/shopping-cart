@@ -1,21 +1,38 @@
 import {
   Badge,
-  Button,
   Card,
   Center,
   Group,
   Image,
   Text,
-  useMantineTheme,
+  createStyles,
 } from "@mantine/core";
-import QuantityInput from "./QuantityInput";
 import PropTypes from "prop-types";
+import ItemForm from "./ItemForm";
 import itemImages from "../helpers/itemImages";
 
+const useStyles = createStyles((theme) => {
+  const dark = theme.colorScheme === "dark";
+  const secondaryColor = dark ? theme.colors.dark[1] : theme.colors.gray[7];
+  return {
+    group: {
+      marginBottom: 5,
+      marginTop: theme.spacing.sm,
+      justifyContent: "space-between",
+    },
+    form: { display: "flex", flexWrap: "nowrap", marginTop: 15 },
+    text: { color: secondaryColor, lineHeight: 1.5 },
+  };
+});
+
 const ItemCard = ({ item }) => {
-  const theme = useMantineTheme();
-  const secondaryColor =
-    theme.colorScheme === "dark" ? theme.colors.dark[1] : theme.colors.gray[7];
+  const { classes } = useStyles();
+  const BrandBadge = (
+    <Badge mr={5} color="green">
+      {item.brand}
+    </Badge>
+  );
+
   return (
     <Center>
       <Card shadow="md" p="md">
@@ -26,38 +43,19 @@ const ItemCard = ({ item }) => {
             height={300}
           />
         </Card.Section>
-        <Group
-          sx={{
-            marginBottom: 5,
-            marginTop: theme.spacing.sm,
-            justifyContent: "space-between",
-          }}
-        >
+        <Group className={classes.group}>
           <Text lineClamp={1} weight={500}>
             {item.name}
           </Text>
           <div>
-            {item.brand && (
-              <Badge mr={5} color="green">
-                {item.brand}
-              </Badge>
-            )}
+            {item.brand && BrandBadge}
             <Badge color="white">{item.price}</Badge>
           </div>
         </Group>
-        <Text
-          size="sm"
-          lineClamp={2}
-          sx={{ color: secondaryColor, lineHeight: 1.5 }}
-        >
+        <Text size="sm" lineClamp={2} className={classes.text}>
           {item.description}
         </Text>
-        <Group sx={{ display: "flex", flexWrap: "nowrap", marginTop: 15 }}>
-          <Button variant="light" color="primary" size="sm" fullWidth>
-            Add to cart
-          </Button>
-          <QuantityInput />
-        </Group>
+        <ItemForm item={item} />
       </Card>
     </Center>
   );

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { createStyles, NumberInput, ActionIcon } from "@mantine/core";
 import PropTypes from "prop-types";
 import { Plus, Minus } from "tabler-icons-react";
@@ -44,10 +44,10 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const QuantityInput = ({ min = 1, max = 10 }) => {
+const QuantityInput = ({ value, onChange }) => {
+  const [min, max] = [1, 15];
   const { classes } = useStyles();
   const handlers = useRef();
-  const [value, setValue] = useState(1);
 
   return (
     <div className={classes.wrapper}>
@@ -67,7 +67,7 @@ const QuantityInput = ({ min = 1, max = 10 }) => {
         max={max}
         handlersRef={handlers}
         value={value}
-        onChange={setValue}
+        onChange={onChange}
         classNames={{ input: classes.input }}
       />
 
@@ -84,9 +84,6 @@ const QuantityInput = ({ min = 1, max = 10 }) => {
   );
 };
 
-QuantityInput.propTypes = {
-  min: PropTypes.number,
-  max: PropTypes.number,
-};
+QuantityInput.propTypes = { value: PropTypes.number, onChange: PropTypes.func };
 
 export default QuantityInput;
