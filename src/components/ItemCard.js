@@ -10,6 +10,7 @@ import {
 import PropTypes from "prop-types";
 import ItemForm from "./ItemForm";
 import itemImages from "../helpers/itemImages";
+import { Link } from "react-router-dom";
 
 const useStyles = createStyles((theme) => {
   const dark = theme.colorScheme === "dark";
@@ -44,7 +45,13 @@ const ItemCard = ({ item }) => {
           />
         </Card.Section>
         <Group className={classes.group}>
-          <Text lineClamp={1} weight={500}>
+          <Text
+            lineClamp={1}
+            weight={500}
+            component={Link}
+            to={`/store/${item.imageSrc}`}
+            sx={{ "&:hover": { textDecoration: "underline" } }}
+          >
             {item.name}
           </Text>
           <div>
