@@ -7,6 +7,7 @@ import {
   Text,
   createStyles,
 } from "@mantine/core";
+import { useWindowScroll } from "@mantine/hooks";
 import PropTypes from "prop-types";
 import ItemForm from "./ItemForm";
 import itemImages from "../helpers/itemImages";
@@ -27,6 +28,7 @@ const useStyles = createStyles((theme) => {
 });
 
 const ItemCard = ({ item }) => {
+  const [, scrollTo] = useWindowScroll();
   const { classes } = useStyles();
   const BrandBadge = (
     <Badge mr={5} color="green">
@@ -49,6 +51,7 @@ const ItemCard = ({ item }) => {
             lineClamp={1}
             weight={500}
             component={Link}
+            onClick={() => scrollTo({ y: 0 })}
             to={`/store/${item.imageSrc}`}
             sx={{ "&:hover": { textDecoration: "underline" } }}
           >
