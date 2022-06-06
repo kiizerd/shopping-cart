@@ -11,8 +11,8 @@ import {
 } from "@mantine/core";
 import { Link } from "react-router-dom";
 import InfoCard from "../InfoCard";
-import officeBg from "../../media/office-background-resize.jpg";
-import officeBg2 from "../../media/office-background2-resize.jpg";
+import officeBg from "../../media/office-background.jpg";
+import officeBg2 from "../../media/office-background2.jpg";
 import officeBg3 from "../../media/office-background3.jpg";
 
 const useStyles = createStyles((theme) => {
