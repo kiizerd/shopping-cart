@@ -41,7 +41,7 @@ const useStyles = createStyles((theme) => {
       overflow: "hidden",
       transition: "transform 0.3s linear",
       "&:hover": {
-        transform: "scale(1.1);",
+        transform: "scale(1.05);",
         zIndex: 100,
       },
     },
