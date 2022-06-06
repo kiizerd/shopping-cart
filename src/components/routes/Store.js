@@ -6,7 +6,6 @@ import {
   Space,
 } from "@mantine/core";
 import { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 import { Search } from "tabler-icons-react";
 import ItemCard from "../ItemCard";
 import itemData from "../../data";
@@ -25,6 +24,8 @@ const Store = () => {
   const [searchedItems, setSearchedItems] = useState(items);
 
   useEffect(() => {
+    // Placeholder if I ever add a dynamic library of items
+    // For now, I am just loading products from a file 'data.js'
     if (items.length === 0) {
       setItems(itemData);
     }
@@ -64,10 +65,6 @@ const Store = () => {
       <Space h="md" />
     </Container>
   );
-};
-
-Store.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default Store;
