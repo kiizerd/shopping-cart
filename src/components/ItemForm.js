@@ -7,7 +7,7 @@ import CartContext from "../helpers/cartContext";
 
 const useStyles = createStyles(() => {
   return {
-    form: { display: "flex", flexWrap: "nowrap", marginTop: 15 },
+    form: { display: "flex", flexWrap: "nowrap" },
   };
 });
 

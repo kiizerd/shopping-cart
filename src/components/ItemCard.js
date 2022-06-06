@@ -59,7 +59,7 @@ const ItemCard = ({ item }) => {
             <Badge color="white">{item.price}</Badge>
           </div>
         </Group>
-        <Text size="sm" lineClamp={2} className={classes.text}>
+        <Text mb="xs" size="sm" lineClamp={2} className={classes.text}>
           {item.description}
         </Text>
         <ItemForm item={item} />
