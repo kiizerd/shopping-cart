@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { Search } from "tabler-icons-react";
 import ItemCard from "../ItemCard";
 import itemData from "../../data";
+import { Outlet } from "react-router-dom";
 
 const filterItems = (items, search) => {
   const keys = Object.keys(items[0]);
@@ -40,6 +41,7 @@ const Store = () => {
   return (
     <Container size="xl">
       <ScrollArea p="lg">
+        <Outlet />
         <TextInput
           placeholder="Search products"
           mb="md"
